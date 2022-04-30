@@ -21,7 +21,11 @@ const Nav = () => (
     <NavLink to="/" activeClassName="active" end>
       Products
     </NavLink>
-    <NavLink to="/admin" activeClassName="active">
+    <NavLink
+      to="/admin"
+      activeClassName="active"
+      activeStyle={{ fontStyle: "italic", fondWeight: "900" }}
+    >
       Admin
     </NavLink>
   </nav>

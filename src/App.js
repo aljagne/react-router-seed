@@ -31,8 +31,8 @@ const App = () => {
           <Nav />
           <Routes>
             <Route path="/" element={<Products />}>
-							<Route path="/" element={<ProductsIndex />}/>
-						</Route>
+              <Route path="/" element={<ProductsIndex />} />
+            </Route>
             <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

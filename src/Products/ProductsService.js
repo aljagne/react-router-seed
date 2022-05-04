@@ -29,4 +29,19 @@ export const retrieveProduct = async (id) => {
     return await response.json();
   }
   throw new Error('Something  went wrong');
-}
+};
+
+export const updateProduct = async (payload) => {
+  const response = await fetch(`/api/products/${payload.id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      },
+    body: JSON.stringify(payload),
+  });
+
+  if (response.ok) {
+    return await response.json();
+  }
+  throw new Error('Something went wrong');
+};

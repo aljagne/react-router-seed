@@ -6,6 +6,7 @@ export const listProducts = async () => {
   throw new Error('Something  went wrong');
 };
 
+
 export const createProduct = async (payload) => {
   const response = await fetch(`/api/products`, {
     method: 'POST',

@@ -26,7 +26,19 @@ const ProductStyles = css`
     }
     &-Icon {
       width: 50px;
-      margin-right: 50px
+      margin-right: 50px;
+    }
+    &-Button {
+      background: none;
+      color: #50fa7b;
+      border: 2px solid #50fa7b;
+      border-radius: 6px;
+      padding: 10px 15px;
+      margin-right: 15px;
+      outline: 0;
+      cursor: pointer;
+      font-weight: 600;
+      text-transform: uppercase;
     }
   }
 `;
@@ -43,7 +55,7 @@ const Product = () => {
         setProduct(product);
       } catch (e) {
         console.warn(e);
-        navigate('/', { replace: true, state: { id } });
+        navigate("/", { replace: true, state: { id } });
       }
     })();
   }, [id]);
@@ -66,6 +78,13 @@ const Product = () => {
       </div>
       <div className="Product-Description">
         <p>{product.description}</p>
+        <button
+          type="button"
+          className="Product-Button"
+          onClick={() => navigate(-1)}
+        >
+          Back
+        </button>
       </div>
     </div>
   );
